@@ -55,6 +55,7 @@ class MainPage(BasePage):
         self.switch_to_default_content()
 
     def logout(self):
+        self.click(self.username_show_span)
         self.click(self.logout_menu)
 
 

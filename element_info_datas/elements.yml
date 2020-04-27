@@ -27,7 +27,7 @@ main_page:
   my_zone_menu:
     element_name: '我的地盘'
     locator_type: 'XPATH'
-    locator_value: //li[@data-id="my"]
+    locator_value: '//li[@data-id="my"]'
     timeout: 3
 
   product_menu :
@@ -45,7 +45,7 @@ main_page:
   logout_menu:
     element_name: '签退'
     locator_type: 'XPATH'
-    locator_value: '//a[@id="signOut"]'
+    locator_value: '//a[@href="/zentao1/www/user-logout.html"]'
     timeout: 3
 
   zentao_vaesion:
@@ -57,7 +57,8 @@ main_page:
   forget_password_menu:
     element_name: '忘记密码'
     locator_type: 'XPATH'
-    locator_value: '//a[@href="/biz/my-changepassword.html?onlybody=yes"]'
+    locator_value: '//a[@href="/zentao1/www/my-changepassword.html?onlybody=yes"]'
+
     timeout: 3
 
   forget_password_original_password:
