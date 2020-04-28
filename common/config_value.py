@@ -3,9 +3,9 @@ import configparser
 
 
 class ConfigValue:
-    def __init__(self):
+    def __init__(self, conf_path='../conf/local_config.ini'):
         self.current_path = os.path.dirname(__file__)
-        self.conf_path = os.path.join(self.current_path, '../conf/local_config.ini')
+        self.conf_path = os.path.join(self.current_path, conf_path)
         self.conf = configparser.ConfigParser()
         self.conf_data = self.conf.read(self.conf_path, encoding='utf-8')
 
