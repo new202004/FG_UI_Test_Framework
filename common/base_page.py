@@ -32,6 +32,7 @@ class BasePage:
 
     '''self.username_input_box = {'element_name': '用户名输入框','locator_type': 'XPATH',
     'locator_value': '//input[@name="account"]','timeout': 3}'''
+
     def find_element(self, element_info):
         locator_element_name = element_info['element_name']
         locator_type_name = element_info['locator_type']
@@ -45,10 +46,9 @@ class BasePage:
         elif locator_type_name == 'XPATH':
             locator_type = By.XPATH
 
-        elment = WebDriverWait(self.driver, int(locator_timeout))\
+        elment = WebDriverWait(self.driver, int(locator_timeout)) \
             .until(lambda x: x.find_element(locator_type, locator_value_info))
         logger.info('%s：  元素识别成功' % locator_element_name)
-
 
         return elment
 
@@ -81,12 +81,3 @@ class BasePage:
     def switch_to_default_content(self):
         self.driver.switch_to.default_content()
         time.sleep(2)
-
-
-
-
-
-
-
-
-

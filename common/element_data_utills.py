@@ -29,5 +29,5 @@ def get_page_info(page_name):
 
 
 if __name__ == '__main__':
-    # print(get_page_info('login_page'))
+    print(get_page_info('login_page'))
     print(__name__)
